@@ -1,0 +1,4 @@
+# This files display where the dotfiles where originally located.# Creating a symbolic link is possible by executing following command
+# $ ln -s /path/to/file /path/to/symlink
+
+ln -s dotfiles/.vimrc .vimrc
