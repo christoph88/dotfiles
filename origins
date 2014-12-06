@@ -2,3 +2,4 @@
 # $ ln -s /path/to/file /path/to/symlink
 
 ln -s dotfiles/.vimrc ~/.vimrc
+ln -s dotfiles/.bashrc ~/.bashrc
