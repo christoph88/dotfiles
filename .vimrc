@@ -38,6 +38,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " gui options
+color codeschool
 syntax on
 filetype indent on
 let g:NERDTreeWinPos = "left"
@@ -49,6 +50,9 @@ set lazyredraw
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+
+" Store swap files in fixed location, not current directory.
+set dir=~/.vimswap//,/var/tmp//,/tmp//,.
 
 " editor options
 :let mapleader="," " set leader button to ,
