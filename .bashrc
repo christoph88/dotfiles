@@ -114,9 +114,10 @@ if ! shopt -oq posix; then
 fi
 
 # Christoph's bash aliases
-alias ..='cd ..' # quickly go to parent directory
+alias ..='cd ..' # go to parent directory
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias .....='cd ../../../../'
 alias ls='ls --color=auto'
 alias lsa='ls -la' # show all files and rights
+alias mailme='mail -s "Mail from bash" $GMAILUN' # send mail to myself

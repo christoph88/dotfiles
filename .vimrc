@@ -43,6 +43,7 @@ syntax on
 filetype indent on
 let g:NERDTreeWinPos = "left"
 set number
+set relativenumber
 set cursorline
 set cursorcolumn
 set showcmd
