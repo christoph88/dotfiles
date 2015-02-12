@@ -49,9 +49,6 @@ set cursorline
 set cursorcolumn
 set showcmd
 set lazyredraw
-" move vertically by visual line
-nnoremap j gj
-nnoremap k gk
 
 " Store swap files in fixed location, not current directory.
 set directory=~/.vimswap//
@@ -64,6 +61,10 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+runtime macros/matchit.vim
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
 
 " search options
 set ic " ignore case
