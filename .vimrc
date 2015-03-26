@@ -77,17 +77,5 @@ set hlsearch " highlight matches
 " plugin options
 map <silent> <F2> :NERDTreeToggle<CR>
 
-" search visual selection
-function! GetVisual() range
-    let reg_save = getreg('"')
-    let regtype_save = getregtype('"')
-    let cb_save = &clipboard
-    set clipboard&
-    normal! ""gvy
-    let selection = getreg('"')
-    call setreg('"', reg_save, regtype_save)
-    let &clipboard = cb_save
-    return selection
-endfunction
-
-vmap <leader>z :%s/<c-r>=GetVisual()<cr>/
+" ctrl+R to replace visual selection
+vnoremap <C-r> "hy:%s/<C-r>h//g<left><left><left>
