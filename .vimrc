@@ -78,4 +78,4 @@ set hlsearch " highlight matches
 map <silent> <F2> :NERDTreeToggle<CR>
 
 " ctrl+R to replace visual selection
-vnoremap <C-r> "hy:%s/<C-r>h//g<left><left><left>
+vnoremap <C-r> "hy:%s/<C-r>+//g<left><left><left>
