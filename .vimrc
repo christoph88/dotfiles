@@ -65,6 +65,8 @@ runtime macros/matchit.vim
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+" Press ii to exit insert mode.
+imap ii <Esc>
 
 " search options
 set ic " ignore case
@@ -74,3 +76,18 @@ set hlsearch " highlight matches
 
 " plugin options
 map <silent> <F2> :NERDTreeToggle<CR>
+
+" search visual selection
+function! GetVisual() range
+    let reg_save = getreg('"')
+    let regtype_save = getregtype('"')
+    let cb_save = &clipboard
+    set clipboard&
+    normal! ""gvy
+    let selection = getreg('"')
+    call setreg('"', reg_save, regtype_save)
+    let &clipboard = cb_save
+    return selection
+endfunction
+
+vmap <leader>z :%s/<c-r>=GetVisual()<cr>/
