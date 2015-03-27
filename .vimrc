@@ -77,5 +77,5 @@ set hlsearch " highlight matches
 " plugin options
 map <silent> <F2> :NERDTreeToggle<CR>
 
-" ctrl+R to replace visual selection
-vnoremap <C-r> "hy:%s/<C-r>+//g<left><left><left>
+" leader+R to replace visual selection
+vnoremap <leader>r "hy:%s/<C-r>h//gc<left><left><left>
