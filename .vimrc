@@ -74,7 +74,7 @@ set hls is " set highlighting
 set incsearch " search as chars are entered
 set hlsearch " highlight matches
 " search and replace for selected text
-vnoremap <leader>r "hy:%s/<C-r>h//gc<left><left><left>
+vnoremap <leader>r "hy:%s/<C-r>h//g<left><left><left>
 " show lines for selected text
 vnoremap <leader>f "hy:g/<C-r>h/
 
