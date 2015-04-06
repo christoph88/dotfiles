@@ -52,6 +52,11 @@ set cursorcolumn
 set showcmd
 set lazyredraw
 
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
 " Store swap files in fixed location, not current directory.
 set directory=~/.vimswap//
 set backupdir=~/.vimbackup//
