@@ -23,6 +23,7 @@ Plugin 'Valloric/MatchTagAlways' " Match the closing tag
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'} " Expand html tags
 Plugin 'jeffkreeftmeijer/vim-numbertoggle' " Use ctrl+n to switch between numbering styles
 Plugin 'kien/ctrlp.vim' " Fuzzy Finder
+Plugin 'tpope/vim-repeat' " Repeat for plugins
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
