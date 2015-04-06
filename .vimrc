@@ -22,6 +22,7 @@ Plugin 'ervandew/supertab' " Use autocomplete everywhere
 Plugin 'Valloric/MatchTagAlways' " Match the closing tag
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'} " Expand html tags
 Plugin 'jeffkreeftmeijer/vim-numbertoggle' " Use ctrl+n to switch between numbering styles
+Plugin 'kien/ctrlp.vim' " Fuzzy Finder
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -79,4 +80,14 @@ vnoremap <leader>r "hy:%s/<C-r>h//g<left><left><left>
 vnoremap <leader>f "hy:g/<C-r>h/
 
 " plugin options
+" nerdtreetoggle
 map <silent> <F2> :NERDTreeToggle<CR>
+" ctrlp keymapping
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" ctrlp use cwd as start
+let g:ctrlp_working_path_mode = 'ra'
+" ctrlp ignore certain files
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
