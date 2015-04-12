@@ -75,6 +75,12 @@ nnoremap k gk
 " Press ii to exit insert mode.
 imap ii <Esc>
 
+" Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " search options
 set ic " ignore case
 set hls is " set highlighting
