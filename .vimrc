@@ -21,7 +21,6 @@ Plugin 'tpope/vim-surround' " Easily surround text with quotes etc.
 Plugin 'ervandew/supertab' " Use autocomplete everywhere
 Plugin 'Valloric/MatchTagAlways' " Match the closing tag
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'} " Expand html tags
-Plugin 'jeffkreeftmeijer/vim-numbertoggle' " Use ctrl+n to switch between numbering styles
 Plugin 'kien/ctrlp.vim' " Fuzzy Finder
 Plugin 'tpope/vim-repeat' " Repeat for plugins
 
@@ -46,7 +45,6 @@ syntax on
 filetype indent on
 let g:NERDTreeWinPos = "left"
 set number
-set relativenumber
 set cursorline
 set cursorcolumn
 set showcmd
