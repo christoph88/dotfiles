@@ -121,3 +121,11 @@ alias .....='cd ../../../../'
 alias ls='ls --color=auto'
 alias lsa='ls -la --color=auto' # show all files and rights
 alias mailme='mail -s "Mail from bash" $GMAILUN' # send mail to myself
+alias railsserver='bundle exec puma -C config/puma.rb'
+# rbenv stuff
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
