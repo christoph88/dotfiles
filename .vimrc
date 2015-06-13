@@ -25,6 +25,8 @@ Plugin 'kien/ctrlp.vim' " Fuzzy Finder
 Plugin 'tpope/vim-repeat' " Repeat for plugins
 Plugin 'bling/vim-airline' " Added airline plugin
 Plugin 'sjl/gundo.vim' " Added gundo plugin
+Plugin 'skammer/vim-css-color' " Display css colors
+Plugin 'docunext/closetag.vim' " Close html tags
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
