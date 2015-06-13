@@ -23,6 +23,8 @@ Plugin 'Valloric/MatchTagAlways' " Match the closing tag
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'} " Expand html tags
 Plugin 'kien/ctrlp.vim' " Fuzzy Finder
 Plugin 'tpope/vim-repeat' " Repeat for plugins
+Plugin 'bling/vim-airline' " Added airline plugin
+Plugin 'sjl/gundo.vim' " Added gundo plugin
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -100,4 +102,8 @@ let g:ctrlp_working_path_mode = 'ra'
 " ctrlp ignore certain files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-
+" airline
+set laststatus=2
+let g:airline_theme='powerlineish'
+" gundo
+nnoremap <F3> :GundoToggle<CR>
