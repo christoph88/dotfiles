@@ -1,3 +1,9 @@
+" vim:fdm=marker
+" DELETE PASSWORDS BEFORE COMMITING TO GITHUB
+"
+"
+"
+" {{{ Vundle setup
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -13,6 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
+Plugin 'altercation/vim-colors-solarized' " Solarized vim theme
 Plugin 'Lokaltog/vim-easymotion' " Easily move around
 Plugin 'scrooloose/nerdtree' " File tree browser
 Plugin 'scrooloose/nerdcommenter' " Easily create comments
@@ -22,7 +29,7 @@ Plugin 'ervandew/supertab' " Use autocomplete everywhere
 Plugin 'Valloric/MatchTagAlways' " Match the closing tag
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'} " Expand html tags
 Plugin 'kien/ctrlp.vim' " Fuzzy Finder
-Plugin 'tpope/vim-repeat' " Repeat for plugins
+Plugin 'tpope/vim-fugitive' " Vim git integration
 Plugin 'bling/vim-airline' " Added airline plugin
 Plugin 'sjl/gundo.vim' " Added gundo plugin
 Plugin 'docunext/closetag.vim' " Close html tags
@@ -41,9 +48,8 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
-" gui options
-color codeschool
+" }}}
+"{{{ Gui options
 syntax on
 filetype indent on
 let g:NERDTreeWinPos = "left"
@@ -52,17 +58,15 @@ set cursorline
 set cursorcolumn
 set showcmd
 set lazyredraw
+set background=dark
+colorscheme solarized
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
-
-" Store swap files in fixed location, not current directory.
-set directory=~/.vimswap//
-set backupdir=~/.vimbackup//
-
-" editor options
+" }}}
+" {{{ Editor options
 :let mapleader="," " set leader button to ,
 set clipboard=unnamed " system clipboard as default buffer
 set tabstop=2
@@ -82,7 +86,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" search options
+" Store swap files in fixed location, not current directory.
+set directory=~/.vimswap//
+set backupdir=~/.vimbackup//
+" }}}
+" {{{ Search options
 set ic " ignore case
 set hls is " set highlighting
 set incsearch " search as chars are entered
@@ -91,11 +99,11 @@ set hlsearch " highlight matches
 vnoremap <leader>r "hy:%s/<C-r>h//g<left><left><left>
 " show lines for selected text
 vnoremap <leader>f "hy:g/<C-r>h/
-
-" plugin options
-" nerdtreetoggle
+" }}}
+" {{{ NERDTree
 map <silent> <F2> :NERDTreeToggle<CR>
-" ctrlp keymapping
+" }}}
+" {{{ CTRLp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " ctrlp use cwd as start
@@ -103,8 +111,11 @@ let g:ctrlp_working_path_mode = 'ra'
 " ctrlp ignore certain files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-" airline
+" }}}
+" {{{ Airline
 set laststatus=2
-let g:airline_theme='powerlineish'
-" gundo
+let g:airline_theme='solarized'
+" }}}
+" {{{ Gundo
 nnoremap <F3> :GundoToggle<CR>
+" }}}
