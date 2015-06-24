@@ -1,5 +1,4 @@
 " vim:fdm=marker
-" DELETE PASSWORDS BEFORE COMMITING TO GITHUB
 "
 "
 "
@@ -33,6 +32,7 @@ Plugin 'tpope/vim-fugitive' " Vim git integration
 Plugin 'bling/vim-airline' " Added airline plugin
 Plugin 'sjl/gundo.vim' " Added gundo plugin
 Plugin 'docunext/closetag.vim' " Close html tags
+Plugin 'godlygeek/tabular' " Automatically align with tabs
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -118,4 +118,22 @@ let g:airline_theme='solarized'
 " }}}
 " {{{ Gundo
 nnoremap <F3> :GundoToggle<CR>
+" }}}
+" {{{ Tabularize
+nmap <leader>t& :Tabularize /&<CR>
+vmap <leader>t& :Tabularize /&<CR>
+nmap <leader>t= :Tabularize /^[^=]*\zs=<CR>
+vmap <leader>t= :Tabularize /^[^=]*\zs=<CR>
+nmap <leader>t=> :Tabularize /=><CR>
+vmap <leader>t=> :Tabularize /=><CR>
+nmap <leader>t: :Tabularize /:<CR>
+vmap <leader>t: :Tabularize /:<CR>
+nmap <leader>t:: :Tabularize /:\zs<CR>
+vmap <leader>t:: :Tabularize /:\zs<CR>
+nmap <leader>t, :Tabularize /,<CR>
+vmap <leader>t, :Tabularize /,<CR>
+nmap <leader>t,, :Tabularize /,\zs<CR>
+vmap <leader>t,, :Tabularize /,\zs<CR>
+nmap <leader>t<Bar> :Tabularize /<Bar><CR>
+vmap <leader>t<Bar> :Tabularize /<Bar><CR>
 " }}}
