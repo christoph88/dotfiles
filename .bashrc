@@ -114,6 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 # Christoph's bash aliases
+alias k='cd ~/Documenten/kratos' # go to Kratos directory
 alias ..='cd ..' # go to parent directory
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
