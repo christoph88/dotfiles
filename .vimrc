@@ -32,6 +32,7 @@ Plugin 'tpope/vim-fugitive' " Vim git integration
 Plugin 'bling/vim-airline' " Added airline plugin
 Plugin 'sjl/gundo.vim' " Added gundo plugin
 Plugin 'docunext/closetag.vim' " Close html tags
+Plugin 'chrisbra/Colorizer' " Colorize rgb and hex values 
 Plugin 'godlygeek/tabular' " Automatically align with tabs
 
 " All of your Plugins must be added before the following line
@@ -136,4 +137,7 @@ nmap <leader>t,, :Tabularize /,\zs<CR>
 vmap <leader>t,, :Tabularize /,\zs<CR>
 nmap <leader>t<Bar> :Tabularize /<Bar><CR>
 vmap <leader>t<Bar> :Tabularize /<Bar><CR>
+" }}}
+" {{{ Colorizer
+  let g:colorizer_auto_filetype='css,html,scss,html.erb'
 " }}}
