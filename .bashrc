@@ -129,3 +129,8 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Start Tmux when opening terminal
+if [[ ! $TERM =~ screen ]]; then
+    exec tmux
+fi
