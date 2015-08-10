@@ -34,6 +34,7 @@ Plugin 'sjl/gundo.vim' " Added gundo plugin
 Plugin 'docunext/closetag.vim' " Close html tags
 Plugin 'chrisbra/Colorizer' " Colorize rgb and hex values 
 Plugin 'godlygeek/tabular' " Automatically align with tabs
+Plugin 'SirVer/ultisnips' " Add snippets for programming
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -140,4 +141,13 @@ vmap <leader>t<Bar> :Tabularize /<Bar><CR>
 " }}}
 " {{{ Colorizer
   let g:colorizer_auto_filetype='css,html,scss,html.erb'
+" }}}
+" {{{ ultisnips
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 " }}}
