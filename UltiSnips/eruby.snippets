@@ -1,0 +1,50 @@
+extends html
+
+priority -50
+
+# general helpers
+snippet % "<% ruby code =>"
+<% ${1:ruby code} =>
+endsnippet
+
+snippet = "<%= ruby code =>"
+<%= ${1:ruby code} =>
+endsnippet
+
+# taghelpers
+snippet ct "content_tag(:p, 'hello world!')"
+content_tag(${1::tag}, "${2:displayed text}")
+endsnippet
+
+# urlhelper
+snippet cur "current_page?(controller: 'shop', action: 'checkout')"
+current_page?(controller: "${1:controllername}", action: "${2:actionname}")
+endsnippet
+
+snippet lt "link_to 'articles', articles_path, id: 'news', class: 'article'"
+link_to "${1:displayed text}", ${2:route}_path${3:, id: "news", class: "article"}
+endsnippet
+
+snippet ltif "link_to_if @current_user.nil?, 'articles', articles_path, id: 'news', class: 'article'"
+link_to_if ${1:value to be true}, "${2:displayed text}", ${3:route}_path${4:, id: "news", class: "article"}
+endsnippet
+
+snippet ltunless "link_to_unless @current_user.nil?, 'articles', articles_path, id: 'news', class: 'article'"
+link_to_unless ${1:compare with}, "${2:displayed text}", ${3:route}_path${4:, id: "news", class: "article"}
+endsnippet
+
+snippet mt "mail_to 'me@domain.com', 'My email'"
+mail_to "${1:mail@domain.com}", "${2:link text}"
+endsnippet
+
+snippet it "image_tag('icon.png', size: '16x10', alt: 'Edit Entry')"
+image_tag("${1:filename.png}", size: "${2:width x height}", class: "${3:classname}${4:, alt: "Edit Entry")}
+endsnippet
+
+snippet jit "javascript_include_tag 'xmlhr'"
+javascript_include_tag "${1:filename.js}"
+endsnippet
+
+snippet slt "stylesheet_link_tag 'style'"
+stylesheet_link_tag "${1:filename.css}"
+endsnippet

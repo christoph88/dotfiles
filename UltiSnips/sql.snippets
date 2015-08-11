@@ -1,0 +1,27 @@
+priority -50
+
+snippet sel "select statement"
+select
+	top ${2:100}
+	${3:*}
+from
+	${1:tablename}
+endsnippet
+
+snippet upd "update statement"
+update 
+	${4:top (1)} ${5:tablename}
+set
+	${2:fieldname} = ${3:newvalue}
+where 
+	${1:id=}
+endsnippet
+
+snippet del "delete statement"
+delete 
+	${2:top (1)} 
+from
+	${3:tablename}
+where 
+	${1:id=}
+endsnippet
