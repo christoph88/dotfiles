@@ -4,11 +4,11 @@ priority -50
 
 # general helpers
 snippet % "<% ruby code =>"
-<% ${1:ruby code} =>
+<% ${1:ruby code} %>
 endsnippet
 
 snippet = "<%= ruby code =>"
-<%= ${1:ruby code} =>
+<%= ${1:ruby code} %>
 endsnippet
 
 # taghelpers
@@ -39,6 +39,10 @@ endsnippet
 
 snippet it "image_tag('icon.png', size: '16x10', alt: 'Edit Entry')"
 image_tag("${1:filename.png}", size: "${2:width x height}", class: "${3:classname}${4:, alt: "Edit Entry")}
+endsnippet
+
+snippet ia "image_alt('hyphenated-file-name.png')"
+image_alt('${1:filename.png}')
 endsnippet
 
 snippet jit "javascript_include_tag 'xmlhr'"
