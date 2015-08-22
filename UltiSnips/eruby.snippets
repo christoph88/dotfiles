@@ -37,6 +37,10 @@ snippet mt "mail_to 'me@domain.com', 'My email'"
 mail_to "${1:mail@domain.com}", "${2:link text}"
 endsnippet
 
+snippet t "t('translate')"
+t("${1:filename.png}")
+endsnippet
+
 snippet it "image_tag('icon.png', size: '16x10', alt: 'Edit Entry')"
 image_tag("${1:filename.png}", class: "${3:classname}"${4:, alt: image_alt("filename.png"))}
 endsnippet
