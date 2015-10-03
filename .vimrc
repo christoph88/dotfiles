@@ -114,7 +114,7 @@ let g:ctrlp_cmd = 'CtrlP'
 " ctrlp use cwd as start
 let g:ctrlp_working_path_mode = 'ra'
 " enable regex mode on startup
-let g:ctrlp_regexp = 0
+let g:ctrlp_regexp = 1
 " ctrlp ignore certain files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
