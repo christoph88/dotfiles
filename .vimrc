@@ -95,6 +95,10 @@ nnoremap <leader>p diw"0P
 set directory=~/.vimswap//
 set backupdir=~/.vimbackup//
 " }}}
+" {{{ Editor options
+" Add ctags from ruby gem
+set tags+=gems.tags
+" }}}
 " {{{ Search options
 set ic " ignore case
 set hls is " set highlighting
