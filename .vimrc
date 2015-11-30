@@ -94,8 +94,6 @@ nnoremap <leader>p diw"0P
 " Store swap files in fixed location, not current directory.
 set directory=~/.vimswap//
 set backupdir=~/.vimbackup//
-" }}}
-" {{{ Editor options
 " Add ctags from ruby gem
 set tags+=gems.tags
 " }}}
