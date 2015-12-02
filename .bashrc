@@ -134,5 +134,5 @@ export EDITOR='vim'
 
 ### Start Tmux when opening terminal
 if [[ ! $TERM =~ screen ]]; then
-    exec tmux -2
+    exec tmux
 fi

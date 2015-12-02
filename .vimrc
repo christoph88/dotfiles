@@ -35,6 +35,7 @@ Plugin 'docunext/closetag.vim' " Close html tags
 Plugin 'chrisbra/Colorizer' " Colorize rgb and hex values 
 Plugin 'godlygeek/tabular' " Automatically align with tabs
 Plugin 'SirVer/ultisnips' " Add snippets for programming
+Plugin 'christoomey/vim-tmux-navigator' " seamless tmux window navigation
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
