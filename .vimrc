@@ -60,6 +60,9 @@ set cursorline
 set cursorcolumn
 set showcmd
 set lazyredraw
+let g:solarized_bold=1
+let g:solarized_italic=1
+let g:solarized_underline=1
 set background=dark
 colorscheme solarized
 

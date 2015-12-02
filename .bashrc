@@ -131,10 +131,8 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export EDITOR='vim'
-export TERM="screen-256color"
-alias tmux="tmux -2"
 
 ### Start Tmux when opening terminal
 if [[ ! $TERM =~ screen ]]; then
-    exec tmux
+    exec tmux -2
 fi
