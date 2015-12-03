@@ -115,6 +115,7 @@ fi
 
 # Christoph's bash aliases
 alias k='cd ~/Documenten/kratos' # go to Kratos directory
+alias kratos='sh ~/scripts/tmux.kratos.sh' # go to Kratos directory
 alias ..='cd ..' # go to parent directory
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
@@ -131,8 +132,3 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export EDITOR='vim'
-
-### Start Tmux when opening terminal
-if [[ ! $TERM =~ screen ]]; then
-    exec tmux
-fi

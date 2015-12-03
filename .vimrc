@@ -80,6 +80,8 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 runtime macros/matchit.vim
+" open all splits horizontally
+set splitright
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
