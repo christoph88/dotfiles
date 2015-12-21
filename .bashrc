@@ -122,7 +122,7 @@ alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias .....='cd ../../../../'
 alias ls='ls --color=auto'
-alias lsa='ls -la --color=auto' # show all files and rights
+alias lsa='ls -lha --color=auto' # show all files and rights
 alias mailme='mail -s "Mail from bash" $GMAILUN' # send mail to myself
 # rbenv stuff
 export PATH="$HOME/.rbenv/bin:$PATH"

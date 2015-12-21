@@ -80,9 +80,11 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 runtime macros/matchit.vim
+
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+
 " Press ii to exit insert mode.
 imap ii <Esc>
 
@@ -98,8 +100,13 @@ nnoremap <leader>p diw"0P
 " Store swap files in fixed location, not current directory.
 set directory=~/.vimswap//
 set backupdir=~/.vimbackup//
+
 " Add ctags from ruby gem
 set tags+=gems.tags
+
+" press enter of shift enter to add line
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
 " }}}
 " {{{ Search options
 set ic " ignore case
