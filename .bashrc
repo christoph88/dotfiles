@@ -117,6 +117,7 @@ fi
 alias k='cd ~/Documenten/kratos' # go to Kratos directory
 alias kratos='sh ~/scripts/tmux.kratos.sh' # go to Kratos directory
 alias kill-kratos='tmux kill-session -t kratos' # go to Kratos directory
+alias tmux='tmux new bash'
 alias ..='cd ..' # go to parent directory
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
@@ -133,3 +134,7 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export EDITOR='vim'
+
+PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
+# $sudo su and add following to .bashrc for root colors
+#PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
