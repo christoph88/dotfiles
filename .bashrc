@@ -117,7 +117,6 @@ fi
 alias k='cd ~/Documenten/kratos' # go to Kratos directory
 alias kratos='sh ~/scripts/tmux.kratos.sh' # go to Kratos directory
 alias kill-kratos='tmux kill-session -t kratos' # go to Kratos directory
-alias tmux='tmux new bash'
 alias ..='cd ..' # go to parent directory
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
