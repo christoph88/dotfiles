@@ -8,3 +8,5 @@ alias ls='ls --color=auto'
 alias lsa='ls -la --color=auto' # show all files and rights
 alias mailme='mail -s "Mail from bash" $GMAILUN' # send mail to myself
 
+#source bashrc when starting tmux
+source ~/.bashrc
