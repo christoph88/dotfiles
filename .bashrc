@@ -134,6 +134,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export EDITOR='vim'
 
-PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
+#set custom PS1 colors
+export PS1="\[\033[38;5;22m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \w [\t] \[$(tput sgr0)\]\[\033[38;5;22m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 # $sudo su and add following to .bashrc for root colors
-#PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
+#export PS1="\[\033[38;5;1m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \w [\t] \[$(tput sgr0)\]\[\033[38;5;1m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
