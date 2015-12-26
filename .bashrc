@@ -135,6 +135,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export EDITOR='vim'
 
 #set custom PS1 colors
-export PS1="\[\033[38;5;22m\]\u@\h\[$(tput sgr0)\]\[\033[38;5;15m\] \w [\t] \[$(tput sgr0)\]\[\033[38;5;22m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;22m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \w [\t] \[$(tput sgr0)\]\[\033[38;5;22m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 # $sudo su and add following to .bashrc for root colors
-#export PS1="\[\033[38;5;1m\]\u@\h\[$(tput sgr0)\]\[\033[38;5;15m\] \w [\t] \[$(tput sgr0)\]\[\033[38;5;1m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+#export PS1="\[\033[38;5;1m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \w [\t] \[$(tput sgr0)\]\[\033[38;5;1m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
