@@ -29,6 +29,7 @@ Plugin 'Valloric/MatchTagAlways' " Match the closing tag
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'} " Expand html tags
 Plugin 'kien/ctrlp.vim' " Fuzzy Finder
 Plugin 'tpope/vim-fugitive' " Vim git integration
+Plugin 'airblade/vim-gitgutter' "Add git gutter to easily see changes
 Plugin 'bling/vim-airline' " Added airline plugin
 Plugin 'sjl/gundo.vim' " Added gundo plugin
 Plugin 'docunext/closetag.vim' " Close html tags
