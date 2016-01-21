@@ -4,7 +4,7 @@
 "
 " {{{ Vundle setup
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype plugin on                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -108,9 +108,6 @@ set backupdir=~/.vimbackup//
 " Add ctags from ruby gem
 set tags+=gems.tags
 
-" press enter of shift enter to add line
-map <Enter> o<ESC>
-map <S-Enter> O<ESC>
 " }}}
 " {{{ Search options
 set ic " ignore case
