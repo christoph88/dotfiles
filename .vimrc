@@ -6,8 +6,6 @@
 syntax on
 filetype indent on
 set number
-set cursorline
-set cursorcolumn
 set showcmd
 " }}}
 " {{{ Editor options
@@ -40,4 +38,8 @@ set ic " ignore case
 set hls is " set highlighting
 set incsearch " search as chars are entered
 set hlsearch " highlight matches
+" }}}
+" {{{ Google Big Query
+nnoremap <leader>q :execute 'new <bar> 0read ! bq query --dry_run < ' expand('%')<cr> 
+nnoremap <leader><leader>q :execute 'new <bar> 0read ! bq query < ' expand('%')<cr> 
 " }}}
