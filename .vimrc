@@ -10,7 +10,17 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'Lokaltog/vim-easymotion' " Easily move around
+Plug 'airblade/vim-gitgutter' "Add git gutter to easily see changes
+Plug 'christoomey/vim-tmux-navigator' " seamless tmux window navigation
+Plug 'ervandew/supertab' " Use autocomplete everywhere
+Plug 'kien/ctrlp.vim' " Fuzzy Finder
+Plug 'scrooloose/nerdcommenter' " Easily create comments
+Plug 'scrooloose/syntastic' " Syntax highlighter
+Plug 'tpope/vim-fugitive' " Vim git integration
+Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
+Plug 'vim-airline/vim-airline' " Added airline plugin
+Plug 'vim-airline/vim-airline-themes' " Added airline plugin
 
 " Initialize plugin system
 call plug#end()
@@ -69,4 +79,18 @@ command Btfsql :%!
 autocmd FileType sql setlocal equalprg=sqlformat\ --reindent\ --keywords\ upper\ --identifiers\ lower\ -
 "pip install jsbeautifier
 autocmd FileType javascript setlocal equalprg=js-beautify\ --stdin
+" }}}
+" {{{ CTRLp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" ctrlp use cwd as start
+let g:ctrlp_working_path_mode = 'ra'
+" enable regex mode on startup
+let g:ctrlp_regexp = 1
+" ctrlp ignore certain files
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+" }}}
+" {{{ Airline
+set laststatus=2
 " }}}
