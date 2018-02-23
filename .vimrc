@@ -2,6 +2,19 @@
 "
 "
 "
+"{{{ Plug
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+
+" Initialize plugin system
+call plug#end()
+" }}}
 "{{{ Gui options
 syntax on
 filetype indent on
@@ -49,4 +62,11 @@ command Bqhelp :execute 'new <bar> 0read ! bq help '
 command -nargs=1 Bqls :execute 'new <bar> 0read ! bq ls <f-args>'
 command  Bqlsa :execute 'new <bar> 0read ! bq ls'
 command -nargs=1 Bqshow :execute 'new <bar> 0read ! bq show <f-args>'
+" }}}
+" {{{ Code beautify
+"pip install sqlparse
+command Btfsql :%!
+autocmd FileType sql setlocal equalprg=sqlformat\ --reindent\ --keywords\ upper\ --identifiers\ lower\ -
+"pip install jsbeautifier
+autocmd FileType javascript setlocal equalprg=js-beautify\ --stdin
 " }}}
