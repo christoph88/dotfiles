@@ -76,7 +76,7 @@ command -nargs=1 Bqshow :execute 'new <bar> 0read ! bq show <f-args>'
 " {{{ Code beautify
 "pip install sqlparse
 command Btfsql :%!
-autocmd FileType sql setlocal equalprg=sqlformat\ --reindent\ --keywords\ upper\ --identifiers\ lower\ -
+autocmd FileType sql setlocal equalprg=sqlformat\ --reindent\ --keywords\ upper\ --identifiers\ lower\ --use_space_around_operators\ -
 "pip install jsbeautifier
 autocmd FileType javascript setlocal equalprg=js-beautify\ --stdin
 " }}}
