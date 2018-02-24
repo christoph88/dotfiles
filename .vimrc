@@ -53,6 +53,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <Leader>s <C-w>
 
 " Store swap files in fixed location, not current directory.
 set directory=~/.vimswap//
@@ -66,8 +67,8 @@ set incsearch " search as chars are entered
 set hlsearch " highlight matches
 " }}}
 " {{{ Google Big Query
-nnoremap <leader>q :execute 'new <bar> 0read ! bq query --dry_run < ' expand('%')<cr> 
-nnoremap <leader><leader>q :execute 'new <bar> 0read ! bq query < ' expand('%')<cr> 
+nnoremap <leader>q :execute 'new <bar> 0read ! bq query --dry_run --use_legacy_sql=false < ' expand('%')<cr> 
+nnoremap <leader><leader>q :execute 'new <bar> 0read ! bq query --use_legacy_sql=false < ' expand('%')<cr> 
 command Bqhelp :execute 'new <bar> 0read ! bq help '
 command -nargs=1 Bqls :execute 'new <bar> 0read ! bq ls <f-args>'
 command  Bqlsa :execute 'new <bar> 0read ! bq ls'
