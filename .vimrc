@@ -55,6 +55,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <Leader>s <C-w>
 
+
+" Store swap files in fixed location, not current directory.
+command Vimrc :e $MYVIMRC
+
 " Store swap files in fixed location, not current directory.
 set directory=~/.vimswap//
 set backupdir=~/.vimbackup//
