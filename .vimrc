@@ -53,7 +53,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <Leader>s <C-w>
+nnoremap <Leader>w <C-w>
 
 
 " Store swap files in fixed location, not current directory.
@@ -81,7 +81,7 @@ command -nargs=1 Bqshow :execute 'new <bar> 0read ! bq show <f-args>'
 " {{{ Code beautify
 "pip install sqlparse
 command Btfsql :%!
-autocmd FileType sql setlocal equalprg=sqlformat\ --keywords\ upper\ --use_space_around_operators\ -
+autocmd FileType sql setlocal equalprg=sqlformat\ --reindent\ --keywords\ upper\ --use_space_around_operators\ -
 "pip install jsbeautifier
 autocmd FileType javascript setlocal equalprg=js-beautify\ --stdin
 " }}}
