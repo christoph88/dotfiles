@@ -73,10 +73,10 @@ set hlsearch " highlight matches
 " {{{ Google Big Query
 nnoremap <leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq query --dry_run --use_legacy_sql=false < ' expand('%')<cr> 
 nnoremap <leader><leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq query --use_legacy_sql=false < ' expand('%')<cr> 
-command Bqhelp :execute 'new <bar> 0read ! bq help '
-command -nargs=1 Bqls :execute 'new <bar> 0read ! bq ls <f-args>'
-command  Bqlsa :execute 'new <bar> 0read ! bq ls'
-command -nargs=1 Bqshow :execute 'new <bar> 0read ! bq show <f-args>'
+command Bqhelp :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq help '
+command -nargs=1 Bqls :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls <f-args>'
+command  Bqlsa :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls'
+command -nargs=1 Bqshow :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq show <f-args>'
 " }}}
 " {{{ Code beautify
 "pip install sqlparse
