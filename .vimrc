@@ -54,7 +54,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <Leader>s <C-w>
+nnoremap <Leader>w <C-w>
+
+
+" Store swap files in fixed location, not current directory.
+command Vimrc :e $MYVIMRC
 
 " Store swap files in fixed location, not current directory.
 set directory=~/.vimswap//
@@ -68,17 +72,17 @@ set incsearch " search as chars are entered
 set hlsearch " highlight matches
 " }}}
 " {{{ Google Big Query
-nnoremap <leader>q :execute 'new <bar> 0read ! bq query --dry_run --use_legacy_sql=false < ' expand('%')<cr> 
-nnoremap <leader><leader>q :execute 'new <bar> 0read ! bq query --use_legacy_sql=false < ' expand('%')<cr> 
-command Bqhelp :execute 'new <bar> 0read ! bq help '
-command -nargs=1 Bqls :execute 'new <bar> 0read ! bq ls <f-args>'
-command  Bqlsa :execute 'new <bar> 0read ! bq ls'
-command -nargs=1 Bqshow :execute 'new <bar> 0read ! bq show <f-args>'
+nnoremap <leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq query --dry_run --use_legacy_sql=false < ' expand('%')<cr> 
+nnoremap <leader><leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq query --use_legacy_sql=false < ' expand('%')<cr> 
+command Bqhelp :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq help '
+command -nargs=1 Bqls :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls <f-args>'
+command  Bqlsa :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls'
+command -nargs=1 Bqshow :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq show <f-args>'
 " }}}
 " {{{ Code beautify
 "pip install sqlparse
 command Btfsql :%!
-autocmd FileType sql setlocal equalprg=sqlformat\ --reindent\ --keywords\ upper\ --identifiers\ lower\ --use_space_around_operators\ -
+autocmd FileType sql setlocal equalprg=sqlformat\ --reindent\ --keywords\ upper\ --use_space_around_operators\ -
 "pip install jsbeautifier
 autocmd FileType javascript setlocal equalprg=js-beautify\ --stdin
 " }}}
