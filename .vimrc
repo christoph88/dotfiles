@@ -21,6 +21,7 @@ Plug 'tpope/vim-fugitive' " Vim git integration
 Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
 Plug 'vim-airline/vim-airline' " Added airline plugin
 Plug 'vim-airline/vim-airline-themes' " Added airline plugin
+Plug 'w0rp/ale' " code autoformatting
 
 " Initialize plugin system
 call plug#end()
@@ -94,4 +95,13 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 " }}}
 " {{{ Airline
 set laststatus=2
+" }}}
+" {{{ ale
+" fix files with prettier, and then eslint.
+let b:ale_fixers = {'javascript': ['prettier','eslint']}
+" set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
+" enable completion where available.
+" this setting must be set before ALE is loaded.
+let g:ale_completion_enabled = 1
 " }}}
