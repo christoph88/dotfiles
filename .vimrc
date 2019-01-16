@@ -22,6 +22,7 @@ Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
 Plug 'vim-airline/vim-airline' " Added airline plugin
 Plug 'vim-airline/vim-airline-themes' " Added airline plugin
 Plug 'w0rp/ale' " code autoformatting
+Plug 'yggdroot/indentline' " add indentlines
 
 " Initialize plugin system
 call plug#end()
