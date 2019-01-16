@@ -56,9 +56,14 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <Leader>w <C-w>
 
+" autoclose
+inoremap (; (<CR>);<C-c>O
+inoremap (, (<CR>),<C-c>O
+inoremap {; {<CR>};<C-c>O
+inoremap {, {<CR>},<C-c>O
+inoremap [; [<CR>];<C-c>O
+inoremap [, [<CR>],<C-c>O
 
-" Store swap files in fixed location, not current directory.
-command Vimrc :e $MYVIMRC
 
 " Store swap files in fixed location, not current directory.
 set directory=~/.vimswap//
