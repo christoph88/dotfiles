@@ -98,24 +98,6 @@ command -nargs=1 Bqls :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls <f-a
 command  Bqlsa :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls'
 command -nargs=1 Bqshow :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq show <f-args>'
 " }}}
-" {{{ Code beautify
-"pip install sqlparse
-command Btfsql :%!
-autocmd FileType sql setlocal equalprg=sqlformat\ --reindent\ --keywords\ upper\ --use_space_around_operators\ -
-"pip install jsbeautifier
-autocmd FileType javascript setlocal equalprg=js-beautify\ --stdin
-" }}}
-" {{{ CTRLp
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-" ctrlp use cwd as start
-let g:ctrlp_working_path_mode = 'ra'
-" enable regex mode on startup
-let g:ctrlp_regexp = 1
-" ctrlp ignore certain files
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-" }}}
 " {{{ Airline
 set laststatus=2
 " }}}
