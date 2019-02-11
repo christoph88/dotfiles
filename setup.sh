@@ -1,3 +1,3 @@
 #!/bin/bash
-echo 'value=$(<~/dotfiles/bashrc_add)' >> ~/.bashrcx
-echo 'eval "$value"' >> ~/.bashrcx
+echo 'value=$(<~/dotfiles/bashrc_add)' >> ~/.bashrc
+echo 'eval "$value"' >> ~/.bashrc
