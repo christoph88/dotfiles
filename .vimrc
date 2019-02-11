@@ -103,7 +103,7 @@ set laststatus=2
 " }}}
 " {{{ ale
 " fix files with prettier, and then eslint.
-let b:ale_fixers = {'javascript': ['prettier','eslint']}
+let b:ale_fixers = {'javascript': ['prettier','eslint'], 'sql': ['sqlfmt']}
 " set this variable to 1 to fix files when you save them.
 let g:ale_fix_on_save = 1
 " enable completion where available.
