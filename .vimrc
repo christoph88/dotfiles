@@ -91,8 +91,11 @@ set incsearch " search as chars are entered
 set hlsearch " highlight matches
 " }}}
 " {{{ Google Big Query
-nnoremap <leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq query --dry_run --use_legacy_sql=false < ' expand('%')<cr> 
-nnoremap <leader><leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq query --use_legacy_sql=false < ' expand('%')<cr> 
+" first read js file for udfs merge in query.sql
+" then read sql file and add to query.sql
+" always query query.sql
+nnoremap <leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! cat ' expand('%:t:r').'.js > query.sql; cat 'expand('%:t:r').'.sql >> query.sql; ' 'bq query --dry_run --use_legacy_sql=false < query.sql'<cr> 
+nnoremap <leader><leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! cat ' expand('%:t:r').'.js > query.sql; cat 'expand('%:t:r').'.sql >> query.sql; ' 'bq query --use_legacy_sql=false < query.sql'<cr> 
 command Bqhelp :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq help '
 command -nargs=1 Bqls :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls <f-args>'
 command  Bqlsa :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls'
