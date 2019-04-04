@@ -1,7 +1,7 @@
 #!/bin/bash 
 
-ln -sv ~/Projects/.dotfiles/.bashrc ~
-ln -sv ~/Projects/.dotfiles/.inputrc ~
-ln -sv ~/Projects/.dotfiles/.vimrc ~
-ln -sv ~/Projects/.dotfiles/.tmux.conf ~
+ln -sv ~/.dotfiles/.bashrc ~
+ln -sv ~/.dotfiles/.inputrc ~
+ln -sv ~/.dotfiles/.vimrc ~
+ln -sv ~/.dotfiles/.tmux.conf ~
 
