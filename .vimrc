@@ -32,6 +32,11 @@ syntax on
 filetype indent on
 set number
 set showcmd
+set wildmenu
+set foldenable
+set foldnestmax=2
+set foldmethod=syntax
+nnoremap <space> za
 " }}}
 " {{{ Editor options
 :let mapleader="," " set leader button to ,
@@ -40,8 +45,7 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
-" enable wildmenu
-set wildmenu
+
 
 " move vertically by visual line
 nnoremap j gj
