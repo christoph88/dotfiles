@@ -100,12 +100,12 @@ set hlsearch " highlight matches
 " first read js file for udfs merge in query.sql
 " then read sql file and add to query.sql
 " always query query.sql
-nnoremap <leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! cat ' expand('%:t:r').'.js > query.sql; cat 'expand('%:t:r').'.sql >> query.sql; ' 'bq query --dry_run --use_legacy_sql=false < query.sql'<cr> 
-nnoremap <leader><leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! cat ' expand('%:t:r').'.js > query.sql; cat 'expand('%:t:r').'.sql >> query.sql; ' 'bq query --use_legacy_sql=false < query.sql'<cr> 
-command Bqhelp :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq help '
-command -nargs=1 Bqls :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls <f-args>'
-command  Bqlsa :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls'
-command -nargs=1 Bqshow :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq show <f-args>'
+"nnoremap <leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! cat ' expand('%:t:r').'.js > query.sql; cat 'expand('%:t:r').'.sql >> query.sql; ' 'bq query --dry_run --use_legacy_sql=false < query.sql'<cr> 
+"nnoremap <leader><leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! cat ' expand('%:t:r').'.js > query.sql; cat 'expand('%:t:r').'.sql >> query.sql; ' 'bq query --use_legacy_sql=false < query.sql'<cr> 
+"command Bqhelp :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq help '
+"command -nargs=1 Bqls :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls <f-args>'
+"command  Bqlsa :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls'
+"command -nargs=1 Bqshow :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq show <f-args>'
 " }}}
 " {{{ Airline
 set laststatus=2
