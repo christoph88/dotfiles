@@ -1,5 +1,3 @@
-" vim:fdm=marker
-"
 "
 "
 "{{{ Plug
@@ -45,7 +43,9 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
-
+" move to beginning/end of line
+nnoremap B ^
+nnoremap E $
 
 " move vertically by visual line
 nnoremap j gj
