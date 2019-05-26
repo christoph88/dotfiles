@@ -36,12 +36,14 @@ set foldnestmax=2
 set foldmethod=syntax
 nnoremap <space> za
 " }}}
+
 " {{{ Editor options
 :let mapleader="," " set leader button to ,
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+set exrc " read .vimrc from current directory
 
 " move to beginning/end of line
 nnoremap B ^
