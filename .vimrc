@@ -40,12 +40,12 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
+" enable wildmenu
+set wildmenu
+
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
-
-" quit file without saving
-command Q :q!
 
 " Press ii to exit insert mode.
 imap ii <Esc>
