@@ -35,6 +35,7 @@ set foldenable
 set foldnestmax=2
 set foldmethod=syntax
 nnoremap <space> za
+nmap ; :
 " }}}
 
 " {{{ Editor options
