@@ -27,6 +27,7 @@ call plug#end()
 " }}}
 "{{{ Gui options
 syntax on
+colorscheme desert
 filetype indent on
 set number
 set showcmd
