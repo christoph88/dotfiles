@@ -91,6 +91,9 @@ inoremap {}     {}
 set directory=~/.vimswap//
 set backupdir=~/.vimbackup//
 
+" shortcut to move to current file directory
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
 " }}}
 " {{{ Search options
 set ic " ignore case
