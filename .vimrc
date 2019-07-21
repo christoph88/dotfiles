@@ -13,6 +13,7 @@ Plug 'airblade/vim-gitgutter' "Add git gutter to easily see changes
 Plug 'christoomey/vim-tmux-navigator' " seamless tmux window navigation
 Plug 'ervandew/supertab' " Use autocomplete everywhere
 Plug 'kien/ctrlp.vim' " Fuzzy Finder
+Plug 'https://github.com/scrooloose/nerdtree.git' " Nerdtree
 Plug 'scrooloose/nerdcommenter' " Easily create comments
 Plug 'scrooloose/syntastic' " Syntax highlighter
 Plug 'tpope/vim-fugitive' " Vim git integration
@@ -123,4 +124,7 @@ let g:ale_fix_on_save = 1
 " enable completion where available.
 " this setting must be set before ALE is loaded.
 let g:ale_completion_enabled = 1
+" }}}
+" {{{ ale
+map <F2> :NERDTreeToggle<CR>
 " }}}
