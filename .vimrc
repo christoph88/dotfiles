@@ -15,12 +15,12 @@ Plug 'ervandew/supertab' " Use autocomplete everywhere
 Plug 'kien/ctrlp.vim' " Fuzzy Finder
 Plug 'https://github.com/scrooloose/nerdtree.git' " Nerdtree
 Plug 'scrooloose/nerdcommenter' " Easily create comments
-Plug 'scrooloose/syntastic' " Syntax highlighter
 Plug 'tpope/vim-fugitive' " Vim git integration
 Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
 Plug 'vim-airline/vim-airline' " Added airline plugin
 Plug 'vim-airline/vim-airline-themes' " Added airline plugin
 Plug 'w0rp/ale' " code autoformatting
+Plug 'ycm-core/YouCompleteMe' " autocompletion plugin
 Plug 'yggdroot/indentline' " add indentlines
 
 " Initialize plugin system
