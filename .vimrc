@@ -11,7 +11,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'Lokaltog/vim-easymotion' " Easily move around
 Plug 'airblade/vim-gitgutter' "Add git gutter to easily see changes
 Plug 'christoomey/vim-tmux-navigator' " seamless tmux window navigation
-Plug 'ervandew/supertab' " Use autocomplete everywhere
 Plug 'kien/ctrlp.vim' " Fuzzy Finder
 Plug 'https://github.com/scrooloose/nerdtree.git' " Nerdtree
 Plug 'scrooloose/nerdcommenter' " Easily create comments
