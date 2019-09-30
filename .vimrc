@@ -1,5 +1,8 @@
 "
 "
+"{{{ fzf
+set rtp+=/usr/local/opt/fzf
+" }}}
 "{{{ Plug
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
@@ -11,16 +14,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'Lokaltog/vim-easymotion' " Easily move around
 Plug 'airblade/vim-gitgutter' "Add git gutter to easily see changes
 Plug 'christoomey/vim-tmux-navigator' " seamless tmux window navigation
-Plug 'kien/ctrlp.vim' " Fuzzy Finder
 Plug 'https://github.com/scrooloose/nerdtree.git' " Nerdtree
 Plug 'scrooloose/nerdcommenter' " Easily create comments
 Plug 'tpope/vim-fugitive' " Vim git integration
+Plug 'raimondi/delimitmate' " Autoclose
 Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
+Plug 'tpope/vim-repeat' " Repeat vim surround using \. command.
 Plug 'vim-airline/vim-airline' " Added airline plugin
 Plug 'vim-airline/vim-airline-themes' " Added airline plugin
 Plug 'w0rp/ale' " code autoformatting
 Plug 'ycm-core/YouCompleteMe' " autocompletion plugin
 Plug 'yggdroot/indentline' " add indentlines
+Plug '/usr/local/opt/fzf' " fzf
+Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -65,28 +71,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <Leader>w <C-w>
 
-" autoclose
-inoremap "      ""<Left>
-inoremap "<CR>  "<CR>"<Esc>O
-inoremap ""     "
-inoremap ""     ""
-inoremap '      ''<Left>
-inoremap '<CR>  '<CR>'<Esc>O
-inoremap ''     '
-inoremap ''     ''
-inoremap (      ()<Left>
-inoremap (<CR>  (<CR>)<Esc>O
-inoremap ((     (
-inoremap ()     ()
-inoremap [      []<Left>
-inoremap [<CR>  [<CR>]<Esc>O
-inoremap [[     [
-inoremap []     []
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}
-
 " Store swap files in fixed location, not current directory.
 set directory=~/.vimswap//
 set backupdir=~/.vimbackup//
@@ -124,6 +108,6 @@ let g:ale_fix_on_save = 1
 " this setting must be set before ALE is loaded.
 let g:ale_completion_enabled = 1
 " }}}
-" {{{ ale
+" {{{ NerdTree
 map <F2> :NERDTreeToggle<CR>
 " }}}
