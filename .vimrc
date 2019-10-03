@@ -28,13 +28,14 @@ Plug 'ycm-core/YouCompleteMe' " autocompletion plugin
 Plug 'yggdroot/indentline' " add indentlines
 Plug '/usr/local/opt/fzf' " fzf
 Plug 'junegunn/fzf.vim'
+Plug 'marcopaganini/termschool-vim-theme'
 
 " Initialize plugin system
 call plug#end()
 " }}}
 "{{{ Gui options
 syntax on
-colorscheme desert
+colorscheme termschool
 filetype indent on
 set number
 set showcmd
@@ -100,6 +101,7 @@ set hlsearch " highlight matches
 " }}}
 " {{{ Airline
 set laststatus=2
+let g:airline_theme='deus'
 " }}}
 " {{{ ale
 " fix files with prettier, and then eslint.
