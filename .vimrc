@@ -18,6 +18,7 @@ Plug 'https://github.com/scrooloose/nerdtree.git' " Nerdtree
 Plug 'scrooloose/nerdcommenter' " Easily create comments
 Plug 'tpope/vim-fugitive' " Vim git integration
 Plug 'raimondi/delimitmate' " Autoclose
+Plug 'mattn/emmet-vim' " html autoexpand
 Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
 Plug 'tpope/vim-repeat' " Repeat vim surround using \. command.
 Plug 'vim-airline/vim-airline' " Added airline plugin
@@ -46,6 +47,7 @@ nmap ; :
 " }}}
 
 " {{{ Editor options
+set clipboard=unnamed
 :let mapleader="," " set leader button to ,
 set tabstop=2
 set softtabstop=2
