@@ -107,3 +107,16 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 eval "$(rbenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/christophgeypen/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/christophgeypen/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/christophgeypen/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/christophgeypen/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Go development
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+test -d "${GOPATH}" || mkdir "${GOPATH}"
+test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"

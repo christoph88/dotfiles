@@ -19,6 +19,7 @@ Plug 'scrooloose/nerdcommenter' " Easily create comments
 Plug 'tpope/vim-fugitive' " Vim git integration
 Plug 'raimondi/delimitmate' " Autoclose
 Plug 'mattn/emmet-vim' " html autoexpand
+Plug 'tmhedberg/matchit' " html autoexpand
 Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
 Plug 'tpope/vim-repeat' " Repeat vim surround using \. command.
 Plug 'vim-airline/vim-airline' " Added airline plugin
@@ -29,6 +30,7 @@ Plug 'yggdroot/indentline' " add indentlines
 Plug '/usr/local/opt/fzf' " fzf
 Plug 'junegunn/fzf.vim'
 Plug 'marcopaganini/termschool-vim-theme'
+Plug 'tpope/vim-dadbod' " db querying
 
 " Initialize plugin system
 call plug#end()
@@ -88,24 +90,13 @@ set hls is " set highlighting
 set incsearch " search as chars are entered
 set hlsearch " highlight matches
 " }}}
-" {{{ Google Big Query
-" first read js file for udfs merge in query.sql
-" then read sql file and add to query.sql
-" always query query.sql
-"nnoremap <leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! cat ' expand('%:t:r').'.js > query.sql; cat 'expand('%:t:r').'.sql >> query.sql; ' 'bq query --dry_run --use_legacy_sql=false < query.sql'<cr> 
-"nnoremap <leader><leader>q :execute 'pedit bq <bar> wincmd p <bar> 0read ! cat ' expand('%:t:r').'.js > query.sql; cat 'expand('%:t:r').'.sql >> query.sql; ' 'bq query --use_legacy_sql=false < query.sql'<cr> 
-"command Bqhelp :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq help '
-"command -nargs=1 Bqls :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls <f-args>'
-"command  Bqlsa :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq ls'
-"command -nargs=1 Bqshow :execute 'pedit bq <bar> wincmd p <bar> 0read ! bq show <f-args>'
-" }}}
 " {{{ Airline
 set laststatus=2
 let g:airline_theme='deus'
 " }}}
 " {{{ ale
 " fix files with prettier, and then eslint.
-let b:ale_fixers = {'javascript': ['prettier','eslint'], 'sql': ['sqlfmt']}
+let b:ale_fixers = {'javascript': ['prettier','eslint'], 'sql': ['pgformatter']}
 " set this variable to 1 to fix files when you save them.
 let g:ale_fix_on_save = 1
 " enable completion where available.
