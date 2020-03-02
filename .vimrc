@@ -42,10 +42,6 @@ filetype indent on
 set number
 set showcmd
 set wildmenu
-set foldenable
-set foldnestmax=2
-set foldmethod=syntax
-nnoremap <space> za
 nmap ; :
 " }}}
 
