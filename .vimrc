@@ -98,6 +98,7 @@ let g:ale_fix_on_save = 1
 " enable completion where available.
 " this setting must be set before ALE is loaded.
 let g:ale_completion_enabled = 1
+set completeopt+=noinsert
 " }}}
 " {{{ NerdTree
 map <F2> :NERDTreeToggle<CR>
