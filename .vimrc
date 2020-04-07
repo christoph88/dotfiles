@@ -9,32 +9,40 @@ set rtp+=/usr/local/opt/fzf
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" Make sure you use single quotes
-
-Plug 'Lokaltog/vim-easymotion' " Easily move around
-Plug 'airblade/vim-gitgutter' "Add git gutter to easily see changes
-Plug 'christoomey/vim-tmux-navigator' " seamless tmux window navigation
-Plug 'https://github.com/scrooloose/nerdtree.git' " Nerdtree
-Plug 'scrooloose/nerdcommenter' " Easily create comments
-Plug 'tpope/vim-fugitive' " Vim git integration
-Plug 'raimondi/delimitmate' " Autoclose
-Plug 'mattn/emmet-vim' " html autoexpand
-Plug 'tmhedberg/matchit' " html autoexpand
-Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
-Plug 'tpope/vim-repeat' " Repeat vim surround using \. command.
+" theme and display
+Plug 'marcopaganini/termschool-vim-theme'
 Plug 'vim-airline/vim-airline' " Added airline plugin
 Plug 'vim-airline/vim-airline-themes' " Added airline plugin
-Plug 'w0rp/ale' " code autoformatting
-Plug 'ycm-core/YouCompleteMe' " autocompletion plugin
-Plug 'yggdroot/indentline' " add indentlines
-Plug '/usr/local/opt/fzf' " fzf
+Plug 'airblade/vim-gitgutter' "Add git gutter to easily see changes
+
+" files, search and motions
+Plug 'Lokaltog/vim-easymotion' " Easily move around
+Plug 'christoomey/vim-tmux-navigator' " seamless tmux window navigation
+Plug 'https://github.com/scrooloose/nerdtree.git' " Nerdtree
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'marcopaganini/termschool-vim-theme'
+
+" git
+Plug 'tpope/vim-fugitive' " Vim git integration
+
+" development tools
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " vscode like autocompletion
+Plug 'yggdroot/indentline' " add indentlines
+Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
+Plug 'tpope/vim-repeat' " Repeat vim surround using \. command.
+Plug 'scrooloose/nerdcommenter' " Easily create comments
+
+" html tools
+Plug 'mattn/emmet-vim' " html autoexpand
+Plug 'tmhedberg/matchit' " html % matching
+
+" db querying
 Plug 'tpope/vim-dadbod' " db querying
 
 " Initialize plugin system
 call plug#end()
 " }}}
+"
 "{{{ Gui options
 syntax on
 colorscheme termschool
@@ -89,6 +97,18 @@ set hlsearch " highlight matches
 " {{{ Airline
 set laststatus=2
 let g:airline_theme='deus'
+" }}}
+" {{{ FZF
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>h :History<CR>
+nmap <Leader>t :BTags<CR>
+nmap <Leader>T :Tags<CR>
+nmap <Leader>l :BLines<CR>
+nmap <Leader>L :Lines<CR>
+nmap <Leader>' :Marks<CR>
+nmap <Leader>H :Helptags!<CR>
 " }}}
 " {{{ ale
 let g:ale_linters = {
