@@ -98,6 +98,9 @@ set hlsearch " highlight matches
 set laststatus=2
 let g:airline_theme='deus'
 " }}}
+" {{{ Coc
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+" }}}
 " {{{ FZF
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
@@ -109,29 +112,6 @@ nmap <Leader>l :BLines<CR>
 nmap <Leader>L :Lines<CR>
 nmap <Leader>' :Marks<CR>
 nmap <Leader>H :Helptags!<CR>
-" }}}
-" {{{ ale
-let g:ale_linters = {
-\   'javascript': ['standard'],
-\}
-" fix files with prettier, and then eslint.
-let g:ale_fixers = {'javascript': ['prettier','eslint'], 'sql': ['pgformatter']}
-" set this variable to 1 to fix files when you save them.
-let g:ale_fix_on_save = 1
-" enable completion where available.
-" this setting must be set before ALE is loaded.
-let g:ale_completion_enabled = 1
-set completeopt+=noinsert
-" some extra options
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'never'
-highlight ALEErrorSign ctermbg=NONE ctermfg=red
-highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
-let g:ale_linters_explicit = 1
-let g:ale_lint_on_save = 1
-let g:ale_fix_on_save = 1
 " }}}
 " {{{ NerdTree
 map <F2> :NERDTreeToggle<CR>
