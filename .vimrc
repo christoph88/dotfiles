@@ -55,6 +55,7 @@ nmap ; :
 
 " {{{ Editor options
 set clipboard=unnamed
+set t_BE=
 :let mapleader="," " set leader button to ,
 set tabstop=2
 set softtabstop=2
