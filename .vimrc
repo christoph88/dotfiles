@@ -138,3 +138,27 @@ nmap <Leader>H :Helptags!<CR>
 " {{{ NerdTree
 map <F2> :NERDTreeToggle<CR>
 " }}}
+" {{{ Cheat
+fun! Cheat()
+  
+    echo "<leader>cd                  pwd change to current directory"
+
+    echo "B                           move to beginning of line"
+    echo "E                           move to end of line"
+
+    echo "<leader><leader>            emmet completion"
+
+    echo "<leader>f :gfiles<cr>       open gitfiles"
+    echo "<leader>F :files<cr>        open filesystem"
+    echo "<leader>b :buffers<cr>      open buffers"
+    echo "<leader>h :history<cr>      open history"
+    echo "<leader>t :btags<cr>        open buffer tags"
+    echo "<leader>t :tags<cr>         open tags"
+    echo "<leader>l :blines<cr>       open buffer lines"
+    echo "<leader>l :lines<cr>        open lines"
+    echo "<leader>' :marks<cr>        open marks"
+    echo "<leader>h :helptags!<cr>    open helptags"
+endf
+
+noremap <F3> :call Cheat() <CR>
+" }}}
