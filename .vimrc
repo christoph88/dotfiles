@@ -99,6 +99,9 @@ set hlsearch " highlight matches
 set laststatus=2
 let g:airline_theme='deus'
 " }}}
+" {{{ Emmet
+let g:user_emmet_leader_key=','
+" }}}
 " {{{ Coc
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
