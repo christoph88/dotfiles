@@ -32,12 +32,14 @@ Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
 Plug 'tpope/vim-repeat' " Repeat vim surround using \. command.
 Plug 'scrooloose/nerdcommenter' " Easily create comments
 
+" database tools
+Plug 'tpope/vim-dadbod' " db querying
+
 " html tools
 Plug 'mattn/emmet-vim' " html autoexpand
 Plug 'tmhedberg/matchit' " html % matching
 
 " db querying
-Plug 'tpope/vim-dadbod' " db querying
 
 " Initialize plugin system
 call plug#end()
@@ -158,7 +160,11 @@ fun! Cheat()
     echo "<leader>l :lines<cr>        open lines"
     echo "<leader>' :marks<cr>        open marks"
     echo "<leader>h :helptags!<cr>    open helptags"
+
+    echo ":%DB                        run db query on selection"
 endf
 
 noremap <F3> :call Cheat() <CR>
 " }}}
+" disable unsafe commands in project specific .vimrc
+set secure
