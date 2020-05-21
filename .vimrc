@@ -166,5 +166,9 @@ endf
 
 noremap <F3> :call Cheat() <CR>
 " }}}
+" {{{ DB
+" set database connection for dwh
+" let g:db= "postgresql://username:password@host/database"
 " disable unsafe commands in project specific .vimrc
 set secure
+" }}}
