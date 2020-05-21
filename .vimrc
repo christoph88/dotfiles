@@ -34,6 +34,7 @@ Plug 'scrooloose/nerdcommenter' " Easily create comments
 
 " database tools
 Plug 'tpope/vim-dadbod' " db querying
+Plug 'kristijanhusak/vim-dadbod-ui' " db ui
 
 " html tools
 Plug 'mattn/emmet-vim' " html autoexpand
@@ -162,6 +163,7 @@ fun! Cheat()
     echo "<leader>h :helptags!<cr>    open helptags"
 
     echo ":%DB                        run db query on selection"
+    echo ":DBUI                       get db browsing interface in vim split"
 endf
 
 noremap <F3> :call Cheat() <CR>
