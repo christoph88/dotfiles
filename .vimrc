@@ -141,6 +141,9 @@ nmap <Leader>H :Helptags!<CR>
 " {{{ NerdTree
 map <F2> :NERDTreeToggle<CR>
 " }}}
+" {{{ DBGUI
+map <F3> :DBUIToggle<CR>
+" }}}
 " {{{ Cheat
 fun! Cheat()
   
@@ -166,9 +169,9 @@ fun! Cheat()
     echo ":DBUI                       get db browsing interface in vim split"
 endf
 
-noremap <F3> :call Cheat() <CR>
+noremap <F4> :call Cheat() <CR>
 " }}}
-" {{{ DB
+" {{{ DB per directory
 " set database connection for dwh
 " let g:db= "postgresql://username:password@host/database"
 " disable unsafe commands in project specific .vimrc
