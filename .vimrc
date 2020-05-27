@@ -98,6 +98,9 @@ set hls is " set highlighting
 set incsearch " search as chars are entered
 set hlsearch " highlight matches
 " }}}
+" {{{ NerdCommenter
+let NERDSpaceDelims=1
+" }}}
 " {{{ Airline
 set laststatus=2
 let g:airline_theme='deus'
