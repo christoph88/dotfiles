@@ -155,6 +155,27 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " use <cr> to confirm completion
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"" }}}
+
+let g:coc_global_extensions = [
+      \'coc-browser',
+      \'coc-css',
+      \'coc-cssmodules',
+      \'coc-db',
+      \'coc-emmet',
+      \'coc-eslint',
+      \'coc-highlight',
+      \'coc-html',
+      \'coc-json',
+      \'coc-lists',
+      \'coc-markdownlint',
+      \'coc-pairs',
+      \'coc-python',
+      \'coc-sql',
+      \'coc-tsserver',
+      \'coc-vetur',
+      \'coc-vimlsp',
+      \'coc-xml'
+      \]
 " }}}
 " {{{ FZF
 nmap <Leader>f :GFiles<CR>
