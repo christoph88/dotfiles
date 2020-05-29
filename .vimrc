@@ -31,6 +31,7 @@ Plug 'yggdroot/indentline' " add indentlines
 Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
 Plug 'tpope/vim-repeat' " Repeat vim surround using \. command.
 Plug 'scrooloose/nerdcommenter' " Easily create comments
+Plug 'metakirby5/codi.vim' " Code preview
 
 " database tools
 Plug 'tpope/vim-dadbod' " db querying
