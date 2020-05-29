@@ -156,6 +156,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " use <cr> to confirm completion
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"" }}}
 
+" coc-yank settings
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
 let g:coc_global_extensions = [
       \'coc-browser',
       \'coc-css',
@@ -174,7 +177,8 @@ let g:coc_global_extensions = [
       \'coc-tsserver',
       \'coc-vetur',
       \'coc-vimlsp',
-      \'coc-xml'
+      \'coc-xml',
+      \'coc-yank'
       \]
 " }}}
 " {{{ FZF
