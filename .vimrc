@@ -66,10 +66,6 @@ set shiftwidth=2
 set expandtab
 set exrc " read .vimrc from current directory
 
-" move to beginning/end of line
-nnoremap B ^
-nnoremap E $
-
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
@@ -96,9 +92,6 @@ nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 fun! Cheat()
   
     echo "<leader>cd                  pwd change to current directory"
-
-    echo "B                           move to beginning of line"
-    echo "E                           move to end of line"
 
     echo "<leader><leader>            emmet completion"
 
