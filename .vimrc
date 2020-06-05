@@ -38,7 +38,6 @@ Plug 'kristijanhusak/vim-dadbod-ui' " db ui
 
 " html tools
 Plug 'mattn/emmet-vim' " html autoexpand
-Plug 'tmhedberg/matchit' " html % matching
 
 " db querying
 
