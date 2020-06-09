@@ -24,7 +24,7 @@ Plug 'junegunn/fzf.vim'
 
 " git
 Plug 'tpope/vim-fugitive' " Vim git integration
-Plugin 'Xuyuanp/nerdtree-git-plugin' " Nerdtree git integration
+Plug 'Xuyuanp/nerdtree-git-plugin' " Nerdtree git integration
 
 " development tools
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " vscode like autocompletion
