@@ -97,17 +97,35 @@ fun! Cheat()
 
     echo "<leader>f :gfiles<cr>       open gitfiles"
     echo "<leader>F :files<cr>        open filesystem"
-    echo "<leader>b :buffers<cr>      open buffers"
-    echo "<leader>h :history<cr>      open history"
-    echo "<leader>t :btags<cr>        open buffer tags"
-    echo "<leader>t :tags<cr>         open tags"
-    echo "<leader>l :blines<cr>       open buffer lines"
-    echo "<leader>l :lines<cr>        open lines"
-    echo "<leader>' :marks<cr>        open marks"
-    echo "<leader>h :helptags!<cr>    open helptags"
 
     echo ":%DB                        run db query on selection"
     echo ":DBUI                       get db browsing interface in vim split"
+
+    echo ":Files [PATH] Files (runs $FZF_DEFAULT_COMMAND if defined)"
+    echo ":GFiles [OPTS]  Git files (git ls-files)"
+    echo ":GFiles?  Git files (git status)"
+    echo ":Buffers  Open buffers"
+    echo ":Colors Color schemes"
+    echo ":Ag [PATTERN] ag search result (ALT-A to select all, ALT-D to deselect all)"
+    echo ":Rg [PATTERN] rg search result (ALT-A to select all, ALT-D to deselect all)"
+    echo ":Lines [QUERY]  Lines in loaded buffers"
+    echo ":BLines [QUERY] Lines in the current buffer"
+    echo ":Tags [QUERY] Tags in the project (ctags -R)"
+    echo ":BTags [QUERY]  Tags in the current buffer"
+    echo ":Marks  Marks"
+    echo ":Windows  Windows"
+    echo ":Locate PATTERN locate command output"
+    echo ":History  v:oldfiles and open buffers"
+    echo ":History: Command history"
+    echo ":History/ Search history"
+    echo ":Snippets Snippets (UltiSnips)"
+    echo ":Commits  Git commits (requires fugitive.vim)"
+    echo ":BCommits Git commits for the current buffer"
+    echo ":Commands Commands"
+    echo ":Maps Normal mode mappings"
+    echo ":Helptags Help tags 1"
+    echo ":Filetypes  File types"
+
 endf
 
 noremap <F4> :call Cheat() <CR>
@@ -177,14 +195,6 @@ let g:coc_global_extensions = [
 " {{{ FZF
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
-nmap <Leader>b :Buffers<CR>
-nmap <Leader>h :History<CR>
-nmap <Leader>t :BTags<CR>
-nmap <Leader>T :Tags<CR>
-nmap <Leader>l :BLines<CR>
-nmap <Leader>L :Lines<CR>
-nmap <Leader>' :Marks<CR>
-nmap <Leader>H :Helptags!<CR>
 " }}}
 " {{{ NerdTree
 map <F2> :NERDTreeToggle<CR>
