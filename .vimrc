@@ -95,11 +95,17 @@ fun! Cheat()
 
     echo "<leader><leader>            emmet completion"
 
-    echo "<leader>f :gfiles<cr>       open gitfiles"
-    echo "<leader>F :files<cr>        open filesystem"
-
     echo ":%DB                        run db query on selection"
     echo ":DBUI                       get db browsing interface in vim split"
+
+    echo "I                           Open nerdtree in horizontal split"
+    echo "S                           Open nerdtree in vertical split"
+
+    echo "CTRL+X                      Open fzf in horizontal split"
+    echo "CTRL+V                      Open fzf in vertical split"
+
+    echo "<leader>f :gfiles<cr>       open gitfiles"
+    echo "<leader>F :files<cr>        open filesystem"
 
     echo ":Files                      [PATH] Files (runs $FZF_DEFAULT_COMMAND if defined)"
     echo ":GFiles                     [OPTS]  Git files (git ls-files)"
