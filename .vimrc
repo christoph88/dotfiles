@@ -198,7 +198,6 @@ nmap <Leader>F :Files<CR>
 " }}}
 " {{{ NerdTree
 map <F2> :NERDTreeToggle<CR>
-let NERDTreeQuitOnOpen=1
 " }}}
 " {{{ DBGUI
 map <F3> :DBUIToggle<CR>
