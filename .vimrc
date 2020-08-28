@@ -65,7 +65,7 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set exrc " read .vimrc from current directory
-syntax sync minlines=10000
+set redrawtime=10000 
 
 " move vertically by visual line
 nnoremap j gj
