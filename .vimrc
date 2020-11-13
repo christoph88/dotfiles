@@ -29,6 +29,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin' " Nerdtree git integration
 " development tools
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " vscode like autocompletion
 Plug 'yggdroot/indentline' " add indentlines
+Plug 'mbbill/undotree' " undo tree
 Plug 'tpope/vim-surround' " Easily surround text with quotes etc.
 Plug 'tpope/vim-repeat' " Repeat vim surround using \. command.
 Plug 'scrooloose/nerdcommenter' " Easily create comments
@@ -108,6 +109,7 @@ fun! Cheat()
 
     echo "<leader>f :gfiles<cr>       open gitfiles"
     echo "<leader>F :files<cr>        open filesystem"
+    echo "<leader>m :Marks<cr>        open marks"
 
     echo ":Files                      [PATH] Files (runs $FZF_DEFAULT_COMMAND if defined)"
     echo ":GFiles                     [OPTS]  Git files (git ls-files)"
@@ -130,7 +132,7 @@ fun! Cheat()
 
 endf
 
-noremap <F4> :call Cheat() <CR>
+noremap <F5> :call Cheat() <CR>
 " }}}
 " {{{ Search options
 set ic " ignore case
@@ -197,12 +199,16 @@ let g:coc_global_extensions = [
 " {{{ FZF
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
+nmap <Leader>m :Marks<CR>
 " }}}
 " {{{ NerdTree
 map <F2> :NERDTreeToggle<CR>
 " }}}
+" {{{ UndoTree
+nnoremap <F3> :UndotreeToggle<CR>
+" }}}
 " {{{ DBGUI
-map <F3> :DBUIToggle<CR>
+map <F4> :DBUIToggle<CR>
 " }}}
 " {{{ DB per directory
 " set database connection for dwh
