@@ -18,13 +18,11 @@ Plug 'airblade/vim-gitgutter' "Add git gutter to easily see changes
 " files, search and motions
 Plug 'Lokaltog/vim-easymotion' " Easily move around
 Plug 'christoomey/vim-tmux-navigator' " seamless tmux window navigation
-Plug 'https://github.com/scrooloose/nerdtree.git' " Nerdtree
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " git
 Plug 'tpope/vim-fugitive' " Vim git integration
-Plug 'Xuyuanp/nerdtree-git-plugin' " Nerdtree git integration
 
 " development tools
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " vscode like autocompletion
@@ -100,9 +98,6 @@ fun! Cheat()
 
     echo ":%DB                        run db query on selection"
     echo ":DBUI                       get db browsing interface in vim split"
-
-    echo "I                           Open nerdtree in horizontal split"
-    echo "S                           Open nerdtree in vertical split"
 
     echo "CTRL+X                      Open fzf in horizontal split"
     echo "CTRL+V                      Open fzf in vertical split"
@@ -193,6 +188,7 @@ let g:coc_global_extensions = [
       \'coc-vetur',
       \'coc-vimlsp',
       \'coc-xml',
+      \'coc-explorer',
       \'coc-yank'
       \]
 " }}}
@@ -201,8 +197,8 @@ nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
 nmap <Leader>m :Marks<CR>
 " }}}
-" {{{ NerdTree
-map <F2> :NERDTreeToggle<CR>
+" {{{ coc-explorer
+nmap <F2> :CocCommand explorer<CR>
 " }}}
 " {{{ UndoTree
 nnoremap <F3> :UndotreeToggle<CR>
