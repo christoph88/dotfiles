@@ -120,5 +120,6 @@ compinit
 # End of Docker CLI completions
 
 # Fuzzy search and open
+alias ls='ls -1G'
 alias fo='fzf | xargs open'
 alias fvim='fzf | xargs vim'
