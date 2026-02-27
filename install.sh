@@ -2,7 +2,10 @@
 
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-files=".tmux.conf .vimrc"
+files=".tmux.conf .vimrc .zshrc"
+
+# Create directories required by .vimrc
+mkdir -p "$HOME/.vimswap" "$HOME/.vimbackup"
 
 for file in $files; do
     target="$HOME/$file"

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-files=".tmux.conf .vimrc"
+files=".tmux.conf .vimrc .zshrc"
 
 for file in $files; do
     target="$HOME/$file"
