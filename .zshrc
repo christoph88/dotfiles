@@ -1,6 +1,6 @@
 # Auto-start tmux
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-  tmux attach -t default || tmux new -s default
+  tmux new-session -t default 2>/dev/null || tmux new -s default
 fi
 
 # If you come from bash you might have to change your $PATH.
