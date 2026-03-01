@@ -1,5 +1,18 @@
+" auto-install vim-plug
+let data_dir = '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" plugins
+call plug#begin()
+Plug 'christoomey/vim-tmux-navigator'
+call plug#end()
+
 " gui options
 syntax on
+colorscheme habamax
 filetype indent on
 set number
 set showcmd
@@ -24,11 +37,8 @@ nnoremap k gk
 " press ii to exit insert mode.
 imap ii <Esc>
 
-" easier split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" split navigation handled by vim-tmux-navigator plugin
+" (provides seamless Ctrl+H/J/K/L between vim splits and tmux panes)
 nnoremap <Leader>w <C-w>
 
 " store swap files in fixed location, not current directory.
