@@ -82,7 +82,7 @@ Personal dotfiles for macOS with Ghostty + tmux + vim + zsh.
 - **Theme:** af-magic
 - **Framework:** Oh My Zsh
 - **Plugins:** git
-- **Auto-starts tmux** on shell launch (creates/attaches to `default` session)
+- **Auto-starts tmux** on shell launch (each terminal gets its own session)
 
 ### Aliases
 
