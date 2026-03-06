@@ -7,6 +7,28 @@ files=".tmux.conf .vimrc .zshrc"
 # Create directories required by .vimrc
 mkdir -p "$HOME/.vimswap" "$HOME/.vimbackup"
 
+# Install dependencies via Homebrew
+deps="tmux vim bat fzf"
+missing=""
+for dep in $deps; do
+    if ! command -v "$dep" >/dev/null 2>&1; then
+        missing="$missing $dep"
+    fi
+done
+
+if [ -n "$missing" ]; then
+    echo "The following dependencies are missing:$missing"
+    printf "Install them via Homebrew? [y/N] "
+    read -r answer
+    if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
+        brew install $missing
+    else
+        echo "Skipping dependency installation"
+    fi
+else
+    echo "All dependencies already installed"
+fi
+
 # Install TPM (Tmux Plugin Manager) if not already present
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
     echo "Installing TPM (Tmux Plugin Manager)..."

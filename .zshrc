@@ -126,5 +126,6 @@ compinit
 
 # Fuzzy search and open
 alias ls='ls -1G'
+alias cat='bat'
 alias fo='fzf | xargs open'
 alias fvim='fzf | xargs vim'

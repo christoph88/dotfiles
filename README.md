@@ -5,9 +5,11 @@ Personal dotfiles for macOS with Ghostty + tmux + vim + zsh.
 ## Setup
 
 ```sh
-./install.sh   # symlink dotfiles to ~ and install TPM
+./install.sh   # install dependencies, symlink dotfiles to ~, install TPM
 ./uninstall.sh # remove symlinks and restore backups
 ```
+
+The install script will prompt to install missing dependencies (`tmux`, `vim`, `bat`, `fzf`) via Homebrew.
 
 ## What's included
 
@@ -89,5 +91,6 @@ Personal dotfiles for macOS with Ghostty + tmux + vim + zsh.
 | Alias | Command |
 |-------|---------|
 | `ls` | `ls -1G` (one entry per line, colorized) |
+| `cat` | `bat` (syntax-highlighted cat replacement) |
 | `fo` | Fuzzy find file and open it |
 | `fvim` | Fuzzy find file and open in vim |
