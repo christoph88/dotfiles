@@ -15,9 +15,17 @@ The install script will prompt to install missing dependencies (`tmux`, `vim`, `
 
 | File | Purpose |
 |------|---------|
+| `ghostty_config` | Ghostty terminal config (`~/Library/Application Support/com.mitchellh.ghostty/config`) |
 | `.tmux.conf` | tmux configuration |
 | `.vimrc` | Vim configuration |
 | `.zshrc` | Zsh / Oh My Zsh configuration |
+
+## Ghostty
+
+| Setting | Value |
+|---------|-------|
+| `Cmd+`` ` | Toggle quick terminal (global hotkey) |
+| `desktop-notifications` | Enabled (for Claude Code etc.) |
 
 ## tmux
 

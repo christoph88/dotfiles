@@ -49,3 +49,16 @@ for file in $files; do
     ln -sf "$source" "$target"
     echo "Linked $target -> $source"
 done
+
+# Symlink Ghostty config
+ghostty_target="$HOME/Library/Application Support/com.mitchellh.ghostty/config"
+ghostty_source="$DOTFILES_DIR/ghostty_config"
+mkdir -p "$(dirname "$ghostty_target")"
+
+if [ -e "$ghostty_target" ] && [ ! -L "$ghostty_target" ]; then
+    echo "Backing up existing $ghostty_target to $ghostty_target.bak"
+    mv "$ghostty_target" "$ghostty_target.bak"
+fi
+
+ln -sf "$ghostty_source" "$ghostty_target"
+echo "Linked $ghostty_target -> $ghostty_source"
