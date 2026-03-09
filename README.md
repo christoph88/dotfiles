@@ -48,6 +48,7 @@ The install script will prompt to install missing dependencies (`tmux`, `vim`, `
 - Mouse enabled (scroll, select panes, resize)
 - Vi copy mode with mouse selection auto-copied to system clipboard
 - OSC 8 hyperlink passthrough for Ghostty
+- Escape sequence passthrough enabled (desktop notifications, etc.)
 - Window titles show current directory name
 - Status bar updates every 1s
 
