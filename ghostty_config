@@ -1,2 +1,3 @@
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 desktop-notifications = true
+term = xterm-ghostty

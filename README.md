@@ -26,6 +26,7 @@ The install script will prompt to install missing dependencies (`tmux`, `vim`, `
 |---------|-------|
 | `Cmd+`` ` | Toggle quick terminal (global hotkey) |
 | `desktop-notifications` | Enabled (for Claude Code etc.) |
+| `term` | `xterm-ghostty` (enables proper terminfo, CSI u support in tmux) |
 
 ## tmux
 
@@ -41,13 +42,13 @@ The install script will prompt to install missing dependencies (`tmux`, `vim`, `
 | `prefix + r` | Reload tmux config |
 | `Ctrl+H/J/K/L` | Navigate panes (works across vim splits) |
 | `prefix + H/J/K/L` | Resize panes (repeatable) |
-| `Shift+Enter` | Send CSI u sequence (for Claude Code etc.) |
 
 ### Features
 
 - Mouse enabled (scroll, select panes, resize)
 - Vi copy mode with mouse selection auto-copied to system clipboard
 - OSC 8 hyperlink passthrough for Ghostty
+- Extended keys (CSI u) enabled for Ghostty — proper modifier key support
 - Escape sequence passthrough enabled (desktop notifications, etc.)
 - Window titles show current directory name
 - Status bar updates every 1s
