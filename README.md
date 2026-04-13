@@ -40,6 +40,7 @@ The install script will prompt to install missing dependencies (`tmux`, `vim`, `
 | `prefix + "` | Split horizontally (same directory) |
 | `prefix + %` | Split vertically (same directory) |
 | `prefix + r` | Reload tmux config |
+| `prefix + ,` | Rename current window (sticks until reset) |
 | `Ctrl+H/J/K/L` | Navigate panes (works across vim splits) |
 | `prefix + H/J/K/L` | Resize panes (repeatable) |
 
@@ -50,7 +51,7 @@ The install script will prompt to install missing dependencies (`tmux`, `vim`, `
 - OSC 8 hyperlink passthrough for Ghostty
 - Extended keys (CSI u) enabled for Ghostty — proper modifier key support
 - Escape sequence passthrough enabled (desktop notifications, etc.)
-- Window titles show current directory name
+- Window status shows `#I:#W` — manual rename via `prefix + ,`, otherwise folder basename
 - Status bar updates every 1s
 
 ### Plugins (via TPM)
