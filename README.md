@@ -53,6 +53,7 @@ The install script will prompt to install missing dependencies (`tmux`, `vim`, `
 - Escape sequence passthrough enabled (desktop notifications, etc.)
 - Window status shows `#I:#W` — manual rename via `prefix + ,`, otherwise folder basename
 - Status bar updates every 1s
+- Left status widened to 40 chars so session names aren't truncated
 
 ### Plugins (via TPM)
 
