@@ -120,3 +120,6 @@ alias ls='ls -1G'
 alias cat='bat'
 alias fo='fzf | xargs open'
 alias fvim='fzf | xargs vim'
+
+# Hermes Agent — ensure ~/.local/bin is on PATH
+export PATH="$HOME/.local/bin:$PATH"
