@@ -27,6 +27,7 @@ The install script will prompt to install missing dependencies (`tmux`, `vim`, `
 | `Cmd+`` ` | Toggle quick terminal (global hotkey) |
 | `desktop-notifications` | Enabled (for Claude Code etc.) |
 | `term` | `xterm-ghostty` (enables proper terminfo, CSI u support in tmux) |
+| `initial-window` | `false` (no window on launch — quick terminal only) |
 
 ## tmux
 
@@ -96,6 +97,7 @@ The install script will prompt to install missing dependencies (`tmux`, `vim`, `
 - **Theme:** af-magic
 - **Framework:** Oh My Zsh
 - **Plugins:** git
+- **PATH:** `~/.local/bin` prepended (Hermes Agent and other user-local binaries)
 
 ### Aliases
 
