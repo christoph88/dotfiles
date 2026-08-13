@@ -96,6 +96,7 @@ The install script will prompt to install missing dependencies (`tmux`, `vim`, `
 - **Theme:** af-magic
 - **Framework:** Oh My Zsh
 - **Plugins:** git
+- **Auto-starts tmux** on shell launch (each terminal gets its own session)
 
 ### Aliases
 
